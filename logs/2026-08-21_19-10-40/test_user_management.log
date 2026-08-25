@@ -1,0 +1,39 @@
+2026-08-21 19:10:40 INFO     [2026-08-21_19-10-40] test.test_user_management: === START test_create_update_delete_user ===
+2026-08-21 19:10:40 DEBUG    [2026-08-21_19-10-40] asyncio: Using proactor: IocpProactor
+2026-08-21 19:10:42 INFO     [2026-08-21_19-10-40] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-21 19:10:47 INFO     [2026-08-21_19-10-40] pages.login_page: Logging in as Admin
+2026-08-21 19:10:49 INFO     [2026-08-21_19-10-40] pages.login_page: Login successful
+2026-08-21 19:10:49 INFO     [2026-08-21_19-10-40] tests.test_user_management: Test: create -> verify -> edit -> verify -> delete -> verify
+2026-08-21 19:10:49 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-21 19:10:52 INFO     [2026-08-21_19-10-40] pages.admin_user_page: User Management list is ready
+2026-08-21 19:10:52 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-21 19:10:52 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-21 19:10:55 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Captured employee name: A8DCo 4Ys 010Z
+2026-08-21 19:10:56 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Creating user: qa_user_20260821_191056_86b250 (role=Admin, status=Enabled)
+2026-08-21 19:10:56 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-21 19:10:57 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-21 19:10:58 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='A8D')
+2026-08-21 19:11:00 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Selected autocomplete option: A8DCo 4Ys 010Z
+2026-08-21 19:11:00 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-21 19:11:00 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Filling 'Username' with 'qa_user_20260821_191056_86b250'
+2026-08-21 19:11:06 INFO     [2026-08-21_19-10-40] pages.admin_user_page: User created successfully: qa_user_20260821_191056_86b250
+2026-08-21 19:11:06 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Searching for username: qa_user_20260821_191056_86b250
+2026-08-21 19:11:07 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Asserting username is visible: qa_user_20260821_191056_86b250
+2026-08-21 19:11:07 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Editing user qa_user_20260821_191056_86b250 (new username=qa_user_upd_20260821_191107_f3192f, status=Disabled)
+2026-08-21 19:11:08 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-21 19:11:08 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Selecting 'Disabled' from dropdown 'Status'
+2026-08-21 19:11:09 DEBUG    [2026-08-21_19-10-40] pages.admin_user_page: Filling 'Username' with 'qa_user_upd_20260821_191107_f3192f'
+2026-08-21 19:11:14 INFO     [2026-08-21_19-10-40] pages.admin_user_page: User updated successfully: qa_user_20260821_191056_86b250 -> qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:14 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Searching for username: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:15 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Asserting username is visible: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:15 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Searching for username: qa_user_20260821_191056_86b250
+2026-08-21 19:11:16 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Asserting username is absent: qa_user_20260821_191056_86b250
+2026-08-21 19:11:16 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Searching for username: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:17 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Deleting user: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:18 INFO     [2026-08-21_19-10-40] pages.admin_user_page: User deleted successfully: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:18 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Searching for username: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:18 INFO     [2026-08-21_19-10-40] pages.admin_user_page: Asserting username is absent: qa_user_upd_20260821_191107_f3192f
+2026-08-21 19:11:19 INFO     [2026-08-21_19-10-40] tests.test_user_management: Test finished: full CRUD lifecycle verified
+2026-08-21 19:11:19 INFO     [2026-08-21_19-10-40] session: PASSED tests/test_user_management.py::test_create_update_delete_user (call) in 29.39s
+2026-08-21 19:11:21 INFO     [2026-08-21_19-10-40] test.test_user_management: === END   test_create_update_delete_user ===
+2026-08-21 19:11:21 INFO     [2026-08-21_19-10-40] session: Test session finished (session_id=2026-08-21_19-10-40, exitstatus=0)

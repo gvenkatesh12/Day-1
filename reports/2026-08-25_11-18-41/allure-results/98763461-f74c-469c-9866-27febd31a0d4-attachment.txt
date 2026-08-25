@@ -1,0 +1,94 @@
+2026-08-25 11:18:42 INFO     [2026-08-25_11-18-41] test.test_user_management: === START test_create_update_delete_user ===
+2026-08-25 11:18:42 DEBUG    [2026-08-25_11-18-41] asyncio: Using proactor: IocpProactor
+2026-08-25 11:18:55 INFO     [2026-08-25_11-18-41] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 11:19:04 INFO     [2026-08-25_11-18-41] pages.login_page: Logging in as Admin
+2026-08-25 11:19:11 INFO     [2026-08-25_11-18-41] pages.login_page: Login successful
+2026-08-25 11:19:11 INFO     [2026-08-25_11-18-41] tests.test_user_management: Test: create -> verify -> edit -> verify -> delete -> verify
+2026-08-25 11:19:11 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-25 11:19:23 INFO     [2026-08-25_11-18-41] pages.admin_user_page: User Management list is ready
+2026-08-25 11:19:23 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-25 11:19:23 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:19:34 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Captured employee name: AddFirstmt85jl41vlfl Mid AddLastmt85jl41vlfl
+2026-08-25 11:19:41 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Creating user: qa_user_20260825_111941_7e3096 (role=Admin, status=Enabled)
+2026-08-25 11:19:41 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:19:49 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 11:19:49 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='Add')
+2026-08-25 11:19:54 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Selected autocomplete option: AddFirstmt85jl41vlfl Mid AddLastmt85jl41vlfl
+2026-08-25 11:19:54 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 11:19:54 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_111941_7e3096'
+2026-08-25 11:19:59 ERROR    [2026-08-25_11-18-41] pages.admin_user_page: User creation failed for qa_user_20260825_111941_7e3096
+2026-08-25 11:19:59 ERROR    [2026-08-25_11-18-41] session: FAILED tests/test_user_management.py::test_create_update_delete_user (call) in 47.96s
+2026-08-25 11:19:59 ERROR    [2026-08-25_11-18-41] session: failure detail:
+tests\test_user_management.py:44: in test_create_update_delete_user
+    admin.create_user(new_user)
+pages\admin_user_page.py:91: in create_user
+    self._expect_toast("Successfully Saved")
+pages\admin_user_page.py:211: in _expect_toast
+    expect(toast).to_be_visible()
+E   AssertionError: Locator expected to be visible
+E   Actual value: <element(s) not found> 
+E   Call log:
+E   LocatorAssertions.to_be_visible with timeout 5000ms
+E     - waiting for locator("div.oxd-toast").filter(has_text="Successfully Saved")
+2026-08-25 11:20:01 INFO     [2026-08-25_11-18-41] test.test_user_management: === END   test_create_update_delete_user ===
+2026-08-25 11:20:01 INFO     [2026-08-25_11-18-41] test.test_user_management: === START test_login_invalid_credentials ===
+2026-08-25 11:20:01 INFO     [2026-08-25_11-18-41] tests.test_user_management: Negative: login with invalid credentials is rejected
+2026-08-25 11:20:01 INFO     [2026-08-25_11-18-41] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 11:20:07 INFO     [2026-08-25_11-18-41] pages.login_page: Attempting login as definitely_not_a_user (expecting failure)
+2026-08-25 11:20:12 INFO     [2026-08-25_11-18-41] pages.login_page: Asserting invalid-credentials alert
+2026-08-25 11:20:14 INFO     [2026-08-25_11-18-41] pages.login_page: Attempting login as Admin (expecting failure)
+2026-08-25 11:20:19 INFO     [2026-08-25_11-18-41] pages.login_page: Asserting invalid-credentials alert
+2026-08-25 11:20:21 INFO     [2026-08-25_11-18-41] session: PASSED tests/test_user_management.py::test_login_invalid_credentials (call) in 19.64s
+2026-08-25 11:20:21 INFO     [2026-08-25_11-18-41] test.test_user_management: === END   test_login_invalid_credentials ===
+2026-08-25 11:20:22 INFO     [2026-08-25_11-18-41] test.test_user_management: === START test_login_empty_fields_show_required ===
+2026-08-25 11:20:22 INFO     [2026-08-25_11-18-41] tests.test_user_management: Negative: empty login submission surfaces Required errors
+2026-08-25 11:20:22 INFO     [2026-08-25_11-18-41] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 11:20:28 INFO     [2026-08-25_11-18-41] pages.login_page: Submitting empty login form
+2026-08-25 11:20:29 INFO     [2026-08-25_11-18-41] pages.login_page: Asserting login required-field errors
+2026-08-25 11:20:29 INFO     [2026-08-25_11-18-41] session: PASSED tests/test_user_management.py::test_login_empty_fields_show_required (call) in 6.82s
+2026-08-25 11:20:29 INFO     [2026-08-25_11-18-41] test.test_user_management: === END   test_login_empty_fields_show_required ===
+2026-08-25 11:20:29 INFO     [2026-08-25_11-18-41] test.test_user_management: === START test_create_user_duplicate_username_rejected ===
+2026-08-25 11:20:30 INFO     [2026-08-25_11-18-41] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 11:20:38 INFO     [2026-08-25_11-18-41] pages.login_page: Logging in as Admin
+2026-08-25 11:20:46 INFO     [2026-08-25_11-18-41] pages.login_page: Login successful
+2026-08-25 11:20:46 INFO     [2026-08-25_11-18-41] tests.test_user_management: Negative: duplicate username on Add User is rejected
+2026-08-25 11:20:46 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-25 11:20:56 INFO     [2026-08-25_11-18-41] pages.admin_user_page: User Management list is ready
+2026-08-25 11:20:56 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-25 11:20:56 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:21:01 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Captured employee name: AddFirstmt85jl41vlfl Mid AddLastmt85jl41vlfl
+2026-08-25 11:21:04 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Creating user: qa_user_20260825_112104_26609d (role=Admin, status=Enabled)
+2026-08-25 11:21:04 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:21:09 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 11:21:09 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='Add')
+2026-08-25 11:21:14 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Selected autocomplete option: AddFirstmt85jl41vlfl Mid AddLastmt85jl41vlfl
+2026-08-25 11:21:14 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 11:21:14 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_112104_26609d'
+2026-08-25 11:21:24 INFO     [2026-08-25_11-18-41] pages.admin_user_page: User created successfully: qa_user_20260825_112104_26609d
+2026-08-25 11:21:24 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Attempting to create user: qa_user_20260825_112104_26609d (expecting rejection)
+2026-08-25 11:21:24 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:21:27 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 11:21:27 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='Add')
+2026-08-25 11:21:31 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Selected autocomplete option: AddFirstmt85jl41vlfl Mid AddLastmt85jl41vlfl
+2026-08-25 11:21:31 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 11:21:31 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_112104_26609d'
+2026-08-25 11:21:31 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Asserting duplicate-username error on Username field
+2026-08-25 11:21:33 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Returning to User Management list
+2026-08-25 11:21:36 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Searching for username: qa_user_20260825_112104_26609d
+2026-08-25 11:21:38 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Deleting user: qa_user_20260825_112104_26609d
+2026-08-25 11:21:39 INFO     [2026-08-25_11-18-41] pages.admin_user_page: User deleted successfully: qa_user_20260825_112104_26609d
+2026-08-25 11:21:39 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Searching for username: qa_user_20260825_112104_26609d
+2026-08-25 11:21:40 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Asserting username is absent: qa_user_20260825_112104_26609d
+2026-08-25 11:21:40 INFO     [2026-08-25_11-18-41] session: PASSED tests/test_user_management.py::test_create_user_duplicate_username_rejected (call) in 53.93s
+2026-08-25 11:21:41 INFO     [2026-08-25_11-18-41] test.test_user_management: === END   test_create_user_duplicate_username_rejected ===
+2026-08-25 11:21:42 INFO     [2026-08-25_11-18-41] test.test_user_management: === START test_create_user_required_fields ===
+2026-08-25 11:21:42 INFO     [2026-08-25_11-18-41] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 11:21:49 INFO     [2026-08-25_11-18-41] pages.login_page: Logging in as Admin
+2026-08-25 11:21:51 INFO     [2026-08-25_11-18-41] pages.login_page: Login successful
+2026-08-25 11:21:51 INFO     [2026-08-25_11-18-41] tests.test_user_management: Negative: empty Add User form surfaces Required errors
+2026-08-25 11:21:51 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-25 11:21:54 INFO     [2026-08-25_11-18-41] pages.admin_user_page: User Management list is ready
+2026-08-25 11:21:54 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Submitting empty Add User form
+2026-08-25 11:21:54 DEBUG    [2026-08-25_11-18-41] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:21:56 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Asserting field errors on: {'User Role': 'Required', 'Employee Name': 'Required', 'Username': 'Required', 'Password': 'Required', 'Confirm Password': 'Passwords do not match'}
+2026-08-25 11:21:56 INFO     [2026-08-25_11-18-41] pages.admin_user_page: Returning to User Management list

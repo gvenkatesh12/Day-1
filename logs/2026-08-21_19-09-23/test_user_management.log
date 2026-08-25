@@ -1,0 +1,18 @@
+2026-08-21 19:09:23 INFO     [2026-08-21_19-09-23] test.test_user_management: === START test_create_update_delete_user ===
+2026-08-21 19:09:23 DEBUG    [2026-08-21_19-09-23] asyncio: Using proactor: IocpProactor
+2026-08-21 19:09:26 INFO     [2026-08-21_19-09-23] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-21 19:09:32 INFO     [2026-08-21_19-09-23] pages.login_page: Logging in as Admin
+2026-08-21 19:09:34 INFO     [2026-08-21_19-09-23] pages.login_page: Login successful
+2026-08-21 19:09:34 INFO     [2026-08-21_19-09-23] tests.test_user_management: Test: create -> verify -> edit -> verify -> delete -> verify
+2026-08-21 19:09:34 INFO     [2026-08-21_19-09-23] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-21 19:09:40 INFO     [2026-08-21_19-09-23] pages.admin_user_page: User Management list is ready
+2026-08-21 19:09:40 INFO     [2026-08-21_19-09-23] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-21 19:09:40 DEBUG    [2026-08-21_19-09-23] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-21 19:09:43 INFO     [2026-08-21_19-09-23] pages.admin_user_page: Captured employee name: A8DCo 4Ys 010Z
+2026-08-21 19:09:45 ERROR    [2026-08-21_19-09-23] session: FAILED tests/test_user_management.py::test_create_update_delete_user (call) in 10.91s
+2026-08-21 19:09:45 ERROR    [2026-08-21_19-09-23] session: failure detail:
+tests\test_user_management.py:41: in test_create_update_delete_user
+    admin.create_user(new_user)
+E   AttributeError: 'str' object has no attribute 'username'
+2026-08-21 19:09:47 INFO     [2026-08-21_19-09-23] test.test_user_management: === END   test_create_update_delete_user ===
+2026-08-21 19:09:47 INFO     [2026-08-21_19-09-23] session: Test session finished (session_id=2026-08-21_19-09-23, exitstatus=1)

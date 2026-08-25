@@ -1,0 +1,102 @@
+2026-08-25 13:04:08 INFO     [2026-08-25_13-04-07] test.test_user_management: === START test_create_update_delete_user ===
+2026-08-25 13:04:08 DEBUG    [2026-08-25_13-04-07] asyncio: Using proactor: IocpProactor
+2026-08-25 13:04:25 INFO     [2026-08-25_13-04-07] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 13:04:36 INFO     [2026-08-25_13-04-07] pages.login_page: Logging in as Admin
+2026-08-25 13:04:38 INFO     [2026-08-25_13-04-07] pages.login_page: Login successful
+2026-08-25 13:04:38 INFO     [2026-08-25_13-04-07] tests.test_user_management: Test: create -> verify -> edit -> verify -> delete -> verify
+2026-08-25 13:04:38 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-25 13:04:40 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User Management list is ready
+2026-08-25 13:04:40 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-25 13:04:40 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 13:04:44 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Captured employee name: A8DCo jAAtcSTz 010Z
+2026-08-25 13:04:45 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Creating user: qa_user_20260825_130445_6b86a1 (role=Admin, status=Enabled)
+2026-08-25 13:04:45 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 13:04:46 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 13:04:46 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='A8D')
+2026-08-25 13:04:49 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Selected autocomplete option: A8DCo jAAtcSTz 010Z
+2026-08-25 13:04:49 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 13:04:49 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_130445_6b86a1'
+2026-08-25 13:04:54 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User created successfully: qa_user_20260825_130445_6b86a1
+2026-08-25 13:04:54 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_20260825_130445_6b86a1
+2026-08-25 13:04:55 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Asserting username is visible: qa_user_20260825_130445_6b86a1
+2026-08-25 13:04:55 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Editing user qa_user_20260825_130445_6b86a1 (new username=qa_user_upd_20260825_130455_b6e193, status=Disabled)
+2026-08-25 13:04:57 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 13:04:57 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Disabled' from dropdown 'Status'
+2026-08-25 13:04:57 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Filling 'Username' with 'qa_user_upd_20260825_130455_b6e193'
+2026-08-25 13:05:02 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User updated successfully: qa_user_20260825_130445_6b86a1 -> qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:02 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:03 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Asserting username is visible: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:03 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_20260825_130445_6b86a1
+2026-08-25 13:05:04 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Asserting username is absent: qa_user_20260825_130445_6b86a1
+2026-08-25 13:05:04 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:06 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Deleting user: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:07 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User deleted successfully: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:07 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:08 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Asserting username is absent: qa_user_upd_20260825_130455_b6e193
+2026-08-25 13:05:08 INFO     [2026-08-25_13-04-07] tests.test_user_management: Test finished: full CRUD lifecycle verified
+2026-08-25 13:05:08 INFO     [2026-08-25_13-04-07] session: PASSED tests/test_user_management.py::test_create_update_delete_user (call) in 29.72s
+2026-08-25 13:05:09 INFO     [2026-08-25_13-04-07] test.test_user_management: === END   test_create_update_delete_user ===
+2026-08-25 13:05:09 INFO     [2026-08-25_13-04-07] test.test_user_management: === START test_login_invalid_credentials ===
+2026-08-25 13:05:10 INFO     [2026-08-25_13-04-07] tests.test_user_management: Negative: login with invalid credentials is rejected
+2026-08-25 13:05:10 INFO     [2026-08-25_13-04-07] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 13:05:23 INFO     [2026-08-25_13-04-07] pages.login_page: Attempting login as definitely_not_a_user (expecting failure)
+2026-08-25 13:05:27 INFO     [2026-08-25_13-04-07] pages.login_page: Asserting invalid-credentials alert
+2026-08-25 13:05:27 INFO     [2026-08-25_13-04-07] pages.login_page: Attempting login as Admin (expecting failure)
+2026-08-25 13:05:29 INFO     [2026-08-25_13-04-07] pages.login_page: Asserting invalid-credentials alert
+2026-08-25 13:05:29 INFO     [2026-08-25_13-04-07] session: PASSED tests/test_user_management.py::test_login_invalid_credentials (call) in 19.83s
+2026-08-25 13:05:30 INFO     [2026-08-25_13-04-07] test.test_user_management: === END   test_login_invalid_credentials ===
+2026-08-25 13:05:30 INFO     [2026-08-25_13-04-07] test.test_user_management: === START test_login_empty_fields_show_required ===
+2026-08-25 13:05:30 INFO     [2026-08-25_13-04-07] tests.test_user_management: Negative: empty login submission surfaces Required errors
+2026-08-25 13:05:30 INFO     [2026-08-25_13-04-07] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 13:05:45 ERROR    [2026-08-25_13-04-07] session: FAILED tests/test_user_management.py::test_login_empty_fields_show_required (call) in 15.03s
+2026-08-25 13:05:45 ERROR    [2026-08-25_13-04-07] session: failure detail:
+tests\test_user_management.py:106: in test_login_empty_fields_show_required
+    login.open(settings.base_url)
+pages\login_page.py:19: in open
+    self.page.goto(url)
+.venv\Lib\site-packages\playwright\sync_api\_generated.py:9002: in goto
+    self._sync(
+.venv\Lib\site-packages\playwright\_impl\_page.py:553: in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+.venv\Lib\site-packages\playwright\_impl\_frame.py:145: in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+.venv\Lib\site-packages\playwright\_impl\_connection.py:59: in send
+    return await self._connection.wrap_api_call(
+.venv\Lib\site-packages\playwright\_impl\_connection.py:520: in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+E   playwright._impl._errors.TimeoutError: Page.goto: Timeout 15000ms exceeded.
+E   Call log:
+E   navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+2026-08-25 13:05:50 INFO     [2026-08-25_13-04-07] test.test_user_management: === END   test_login_empty_fields_show_required ===
+2026-08-25 13:05:50 INFO     [2026-08-25_13-04-07] test.test_user_management: === START test_create_user_duplicate_username_rejected ===
+2026-08-25 13:05:50 INFO     [2026-08-25_13-04-07] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 13:06:03 INFO     [2026-08-25_13-04-07] pages.login_page: Logging in as Admin
+2026-08-25 13:06:10 INFO     [2026-08-25_13-04-07] pages.login_page: Login successful
+2026-08-25 13:06:10 INFO     [2026-08-25_13-04-07] tests.test_user_management: Negative: duplicate username on Add User is rejected
+2026-08-25 13:06:10 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-25 13:06:18 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User Management list is ready
+2026-08-25 13:06:18 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-25 13:06:18 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 13:06:23 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Captured employee name: A8DCo jAAtcSTz 010Z
+2026-08-25 13:06:24 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Creating user: qa_user_20260825_130624_463db7 (role=Admin, status=Enabled)
+2026-08-25 13:06:24 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 13:06:25 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 13:06:25 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='A8D')
+2026-08-25 13:06:27 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Selected autocomplete option: A8DCo jAAtcSTz 010Z
+2026-08-25 13:06:27 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 13:06:27 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_130624_463db7'
+2026-08-25 13:06:36 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User created successfully: qa_user_20260825_130624_463db7
+2026-08-25 13:06:36 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Attempting to create user: qa_user_20260825_130624_463db7 (expecting rejection)
+2026-08-25 13:06:36 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 13:06:38 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 13:06:38 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='A8D')
+2026-08-25 13:06:40 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Selected autocomplete option: A8DCo jAAtcSTz 010Z
+2026-08-25 13:06:40 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 13:06:40 DEBUG    [2026-08-25_13-04-07] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_130624_463db7'
+2026-08-25 13:06:40 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Asserting duplicate-username error on Username field
+2026-08-25 13:06:42 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Returning to User Management list
+2026-08-25 13:06:45 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_20260825_130624_463db7
+2026-08-25 13:06:46 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Deleting user: qa_user_20260825_130624_463db7
+2026-08-25 13:06:47 INFO     [2026-08-25_13-04-07] pages.admin_user_page: User deleted successfully: qa_user_20260825_130624_463db7
+2026-08-25 13:06:47 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Searching for username: qa_user_20260825_130624_463db7
+2026-08-25 13:06:47 INFO     [2026-08-25_13-04-07] pages.admin_user_page: Asserting username is absent: qa_user_20260825_130624_463db7

@@ -1,0 +1,49 @@
+2026-08-21 19:37:36 INFO     [2026-08-21_19-37-35] test.test_user_management: === START test_create_update_delete_user ===
+2026-08-21 19:37:36 DEBUG    [2026-08-21_19-37-35] asyncio: Using proactor: IocpProactor
+2026-08-21 19:37:58 INFO     [2026-08-21_19-37-35] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-21 19:38:05 INFO     [2026-08-21_19-37-35] pages.login_page: Logging in as Admin
+2026-08-21 19:38:06 INFO     [2026-08-21_19-37-35] pages.login_page: Login successful
+2026-08-21 19:38:06 INFO     [2026-08-21_19-37-35] tests.test_user_management: Test: create -> verify -> edit -> verify -> delete -> verify
+2026-08-21 19:38:06 INFO     [2026-08-21_19-37-35] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-21 19:38:09 INFO     [2026-08-21_19-37-35] pages.admin_user_page: User Management list is ready
+2026-08-21 19:38:09 INFO     [2026-08-21_19-37-35] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-21 19:38:09 DEBUG    [2026-08-21_19-37-35] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-21 19:38:12 INFO     [2026-08-21_19-37-35] pages.admin_user_page: Captured employee name: Ranga Akunuri
+2026-08-21 19:38:14 INFO     [2026-08-21_19-37-35] pages.admin_user_page: Creating user: qa_user_20260821_193814_d2f185 (role=Admin, status=Enabled)
+2026-08-21 19:38:14 DEBUG    [2026-08-21_19-37-35] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-21 19:38:15 DEBUG    [2026-08-21_19-37-35] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-21 19:38:16 DEBUG    [2026-08-21_19-37-35] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='Ran')
+2026-08-21 19:38:23 ERROR    [2026-08-21_19-37-35] pages.admin_user_page: User creation failed for qa_user_20260821_193814_d2f185
+2026-08-21 19:38:23 ERROR    [2026-08-21_19-37-35] session: FAILED tests/test_user_management.py::test_create_update_delete_user (call) in 16.49s
+2026-08-21 19:38:23 ERROR    [2026-08-21_19-37-35] session: failure detail:
+tests\test_user_management.py:74: in test_create_update_delete_user
+    admin.create_user(new_user)
+pages\admin_user_page.py:86: in create_user
+    self.pick_autocomplete_option("Employee Name", user.employee_name[:3])
+pages\base_page.py:57: in pick_autocomplete_option
+    expect(input_box).to_have_value(chosen)
+E   AssertionError: Locator expected to have Value 'Ranga Akunuri'
+E   Actual value: Ranga  Akunuri 
+E   Call log:
+E   LocatorAssertions.to_have_value with timeout 5000ms
+E     - waiting for locator(".oxd-input-group").filter(has=locator(".oxd-label").filter(has_text=re.compile(r"^\s*Employee\ Name\s*\*?\s*$"))).locator("input")
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+E     -   locator resolved to <input data-v-75e744cd="" placeholder="Type for hints..."/>
+E     -   unexpected value "Ranga  Akunuri"
+2026-08-21 19:38:24 INFO     [2026-08-21_19-37-35] test.test_user_management: === END   test_create_update_delete_user ===
+2026-08-21 19:38:25 INFO     [2026-08-21_19-37-35] session: Test session finished (session_id=2026-08-21_19-37-35, exitstatus=1)

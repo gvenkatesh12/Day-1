@@ -1,0 +1,8 @@
+INFO     test.test_user_management:conftest.py:253 === START test_login_invalid_credentials ===
+INFO     tests.test_user_management:test_user_management.py:84 Negative: login with invalid credentials is rejected
+INFO     pages.login_page:login_page.py:18 Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+INFO     pages.login_page:login_page.py:46 Attempting login as definitely_not_a_user (expecting failure)
+INFO     pages.login_page:login_page.py:61 Asserting invalid-credentials alert
+INFO     pages.login_page:login_page.py:46 Attempting login as Admin (expecting failure)
+INFO     pages.login_page:login_page.py:61 Asserting invalid-credentials alert
+INFO     test.test_user_management:conftest.py:255 === END   test_login_invalid_credentials ===

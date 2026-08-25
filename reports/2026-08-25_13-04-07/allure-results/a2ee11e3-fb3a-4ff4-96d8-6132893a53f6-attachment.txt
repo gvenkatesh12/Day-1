@@ -1,0 +1,33 @@
+[32mINFO    [0m test.test_user_management:conftest.py:258 === START test_create_user_duplicate_username_rejected ===
+[32mINFO    [0m pages.login_page:login_page.py:18 Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+[32mINFO    [0m pages.login_page:login_page.py:24 Logging in as Admin
+[32mINFO    [0m pages.login_page:login_page.py:36 Login successful
+[32mINFO    [0m tests.test_user_management:test_user_management.py:119 Negative: duplicate username on Add User is rejected
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:21 Navigating to Admin > User Management
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:30 User Management list is ready
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:42 Capturing an existing employee name from the autocomplete
+[35mDEBUG   [0m pages.admin_user_page:admin_user_page.py:66 Clicking + Add on the User Management list
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:54 Captured employee name: A8DCo jAAtcSTz 010Z
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:81 Creating user: qa_user_20260825_130624_463db7 (role=Admin, status=Enabled)
+[35mDEBUG   [0m pages.admin_user_page:admin_user_page.py:66 Clicking + Add on the User Management list
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:26 Selecting 'Admin' from dropdown 'User Role'
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:46 Picking autocomplete option for 'Employee Name' (typed='A8D')
+[32mINFO    [0m pages.admin_user_page:base_page.py:61 Selected autocomplete option: A8DCo jAAtcSTz 010Z
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:26 Selecting 'Enabled' from dropdown 'Status'
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:35 Filling 'Username' with 'qa_user_20260825_130624_463db7'
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:98 User created successfully: qa_user_20260825_130624_463db7
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:218 Attempting to create user: qa_user_20260825_130624_463db7 (expecting rejection)
+[35mDEBUG   [0m pages.admin_user_page:admin_user_page.py:66 Clicking + Add on the User Management list
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:26 Selecting 'Admin' from dropdown 'User Role'
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:46 Picking autocomplete option for 'Employee Name' (typed='A8D')
+[32mINFO    [0m pages.admin_user_page:base_page.py:61 Selected autocomplete option: A8DCo jAAtcSTz 010Z
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:26 Selecting 'Enabled' from dropdown 'Status'
+[35mDEBUG   [0m pages.admin_user_page:base_page.py:35 Filling 'Username' with 'qa_user_20260825_130624_463db7'
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:247 Asserting duplicate-username error on Username field
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:253 Returning to User Management list
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_20260825_130624_463db7
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:163 Deleting user: qa_user_20260825_130624_463db7
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:178 User deleted successfully: qa_user_20260825_130624_463db7
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_20260825_130624_463db7
+[32mINFO    [0m pages.admin_user_page:admin_user_page.py:124 Asserting username is absent: qa_user_20260825_130624_463db7
+[32mINFO    [0m test.test_user_management:conftest.py:260 === END   test_create_user_duplicate_username_rejected ===

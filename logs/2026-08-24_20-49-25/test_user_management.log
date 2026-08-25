@@ -1,0 +1,15 @@
+2026-08-24 20:49:25 INFO     [2026-08-24_20-49-25] test.test_user_management: === START test_create_user_required_fields ===
+2026-08-24 20:49:25 DEBUG    [2026-08-24_20-49-25] asyncio: Using proactor: IocpProactor
+2026-08-24 20:49:26 INFO     [2026-08-24_20-49-25] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-24 20:49:32 INFO     [2026-08-24_20-49-25] pages.login_page: Logging in as Admin
+2026-08-24 20:49:34 INFO     [2026-08-24_20-49-25] pages.login_page: Login successful
+2026-08-24 20:49:34 INFO     [2026-08-24_20-49-25] tests.test_user_management: Negative: empty Add User form surfaces Required errors
+2026-08-24 20:49:34 INFO     [2026-08-24_20-49-25] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-24 20:49:36 INFO     [2026-08-24_20-49-25] pages.admin_user_page: User Management list is ready
+2026-08-24 20:49:36 INFO     [2026-08-24_20-49-25] pages.admin_user_page: Submitting empty Add User form
+2026-08-24 20:49:36 DEBUG    [2026-08-24_20-49-25] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-24 20:49:38 INFO     [2026-08-24_20-49-25] pages.admin_user_page: Asserting field errors on: {'User Role': 'Required', 'Employee Name': 'Required', 'Username': 'Required', 'Password': 'Required', 'Confirm Password': 'Passwords do not match'}
+2026-08-24 20:49:38 INFO     [2026-08-24_20-49-25] pages.admin_user_page: Returning to User Management list
+2026-08-24 20:49:39 INFO     [2026-08-24_20-49-25] session: PASSED tests/test_user_management.py::test_create_user_required_fields (call) in 5.14s
+2026-08-24 20:49:40 INFO     [2026-08-24_20-49-25] test.test_user_management: === END   test_create_user_required_fields ===
+2026-08-24 20:49:40 INFO     [2026-08-24_20-49-25] session: Test session finished (session_id=2026-08-24_20-49-25, exitstatus=0)

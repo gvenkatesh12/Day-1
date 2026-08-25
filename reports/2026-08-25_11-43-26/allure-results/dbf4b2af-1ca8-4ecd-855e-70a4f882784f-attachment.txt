@@ -1,0 +1,21 @@
+2026-08-25 11:43:26 INFO     [2026-08-25_11-43-26] test.test_user_management: === START test_create_update_delete_user ===
+2026-08-25 11:43:26 DEBUG    [2026-08-25_11-43-26] asyncio: Using proactor: IocpProactor
+2026-08-25 11:43:46 INFO     [2026-08-25_11-43-26] pages.login_page: Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2026-08-25 11:43:59 INFO     [2026-08-25_11-43-26] pages.login_page: Logging in as Admin
+2026-08-25 11:44:04 INFO     [2026-08-25_11-43-26] pages.login_page: Login successful
+2026-08-25 11:44:04 INFO     [2026-08-25_11-43-26] tests.test_user_management: Test: create -> verify -> edit -> verify -> delete -> verify
+2026-08-25 11:44:04 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Navigating to Admin > User Management
+2026-08-25 11:44:16 INFO     [2026-08-25_11-43-26] pages.admin_user_page: User Management list is ready
+2026-08-25 11:44:16 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Capturing an existing employee name from the autocomplete
+2026-08-25 11:44:16 DEBUG    [2026-08-25_11-43-26] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:44:25 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Captured employee name: A8DCo 4Ys 010Z
+2026-08-25 11:44:30 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Creating user: qa_user_20260825_114430_4f04e2 (role=Admin, status=Enabled)
+2026-08-25 11:44:30 DEBUG    [2026-08-25_11-43-26] pages.admin_user_page: Clicking + Add on the User Management list
+2026-08-25 11:44:34 DEBUG    [2026-08-25_11-43-26] pages.admin_user_page: Selecting 'Admin' from dropdown 'User Role'
+2026-08-25 11:44:34 DEBUG    [2026-08-25_11-43-26] pages.admin_user_page: Picking autocomplete option for 'Employee Name' (typed='A8D')
+2026-08-25 11:44:37 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Selected autocomplete option: A8DCo 4Ys 010Z
+2026-08-25 11:44:37 DEBUG    [2026-08-25_11-43-26] pages.admin_user_page: Selecting 'Enabled' from dropdown 'Status'
+2026-08-25 11:44:37 DEBUG    [2026-08-25_11-43-26] pages.admin_user_page: Filling 'Username' with 'qa_user_20260825_114430_4f04e2'
+2026-08-25 11:44:51 INFO     [2026-08-25_11-43-26] pages.admin_user_page: User created successfully: qa_user_20260825_114430_4f04e2
+2026-08-25 11:44:51 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Searching for username: qa_user_20260825_114430_4f04e2
+2026-08-25 11:44:54 INFO     [2026-08-25_11-43-26] pages.admin_user_page: Asserting username is visible: qa_user_20260825_114430_4f04e2

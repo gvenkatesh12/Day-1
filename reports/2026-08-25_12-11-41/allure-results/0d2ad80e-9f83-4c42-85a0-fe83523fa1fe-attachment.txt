@@ -1,0 +1,37 @@
+INFO     test.test_user_management:conftest.py:258 === START test_create_update_delete_user ===
+DEBUG    asyncio:proactor_events.py:634 Using proactor: IocpProactor
+INFO     pages.login_page:login_page.py:18 Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+INFO     pages.login_page:login_page.py:24 Logging in as Admin
+INFO     pages.login_page:login_page.py:36 Login successful
+INFO     tests.test_user_management:test_user_management.py:32 Test: create -> verify -> edit -> verify -> delete -> verify
+INFO     pages.admin_user_page:admin_user_page.py:21 Navigating to Admin > User Management
+INFO     pages.admin_user_page:admin_user_page.py:30 User Management list is ready
+INFO     pages.admin_user_page:admin_user_page.py:42 Capturing an existing employee name from the autocomplete
+DEBUG    pages.admin_user_page:admin_user_page.py:66 Clicking + Add on the User Management list
+INFO     pages.admin_user_page:admin_user_page.py:54 Captured employee name: A8DCo jAAtcSTz 010Z
+INFO     pages.admin_user_page:admin_user_page.py:81 Creating user: qa_user_20260825_121229_de742b (role=Admin, status=Enabled)
+DEBUG    pages.admin_user_page:admin_user_page.py:66 Clicking + Add on the User Management list
+DEBUG    pages.admin_user_page:base_page.py:26 Selecting 'Admin' from dropdown 'User Role'
+DEBUG    pages.admin_user_page:base_page.py:46 Picking autocomplete option for 'Employee Name' (typed='A8D')
+INFO     pages.admin_user_page:base_page.py:61 Selected autocomplete option: A8DCo jAAtcSTz 010Z
+DEBUG    pages.admin_user_page:base_page.py:26 Selecting 'Enabled' from dropdown 'Status'
+DEBUG    pages.admin_user_page:base_page.py:35 Filling 'Username' with 'qa_user_20260825_121229_de742b'
+INFO     pages.admin_user_page:admin_user_page.py:98 User created successfully: qa_user_20260825_121229_de742b
+INFO     pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_20260825_121229_de742b
+INFO     pages.admin_user_page:admin_user_page.py:118 Asserting username is visible: qa_user_20260825_121229_de742b
+INFO     pages.admin_user_page:admin_user_page.py:132 Editing user qa_user_20260825_121229_de742b (new username=qa_user_upd_20260825_121242_7277cb, status=Disabled)
+DEBUG    pages.admin_user_page:base_page.py:26 Selecting 'Admin' from dropdown 'User Role'
+DEBUG    pages.admin_user_page:base_page.py:26 Selecting 'Disabled' from dropdown 'Status'
+DEBUG    pages.admin_user_page:base_page.py:35 Filling 'Username' with 'qa_user_upd_20260825_121242_7277cb'
+INFO     pages.admin_user_page:admin_user_page.py:156 User updated successfully: qa_user_20260825_121229_de742b -> qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:118 Asserting username is visible: qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_20260825_121229_de742b
+INFO     pages.admin_user_page:admin_user_page.py:124 Asserting username is absent: qa_user_20260825_121229_de742b
+INFO     pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:163 Deleting user: qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:178 User deleted successfully: qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:104 Searching for username: qa_user_upd_20260825_121242_7277cb
+INFO     pages.admin_user_page:admin_user_page.py:124 Asserting username is absent: qa_user_upd_20260825_121242_7277cb
+INFO     tests.test_user_management:test_user_management.py:69 Test finished: full CRUD lifecycle verified
+INFO     test.test_user_management:conftest.py:260 === END   test_create_update_delete_user ===

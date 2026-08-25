@@ -1,0 +1,3 @@
+username=qa_user_20260825_114430_4f04e2
+role=Admin
+status=Enabled

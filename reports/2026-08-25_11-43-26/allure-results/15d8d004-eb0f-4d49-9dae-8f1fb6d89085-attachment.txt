@@ -1,0 +1,12 @@
+INFO     test.test_user_management:conftest.py:258 === START test_create_user_required_fields ===
+INFO     pages.login_page:login_page.py:18 Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+INFO     pages.login_page:login_page.py:24 Logging in as Admin
+INFO     pages.login_page:login_page.py:36 Login successful
+INFO     tests.test_user_management:test_user_management.py:149 Negative: empty Add User form surfaces Required errors
+INFO     pages.admin_user_page:admin_user_page.py:21 Navigating to Admin > User Management
+INFO     pages.admin_user_page:admin_user_page.py:30 User Management list is ready
+INFO     pages.admin_user_page:admin_user_page.py:229 Submitting empty Add User form
+DEBUG    pages.admin_user_page:admin_user_page.py:66 Clicking + Add on the User Management list
+INFO     pages.admin_user_page:admin_user_page.py:241 Asserting field errors on: {'User Role': 'Required', 'Employee Name': 'Required', 'Username': 'Required', 'Password': 'Required', 'Confirm Password': 'Passwords do not match'}
+INFO     pages.admin_user_page:admin_user_page.py:253 Returning to User Management list
+INFO     test.test_user_management:conftest.py:260 === END   test_create_user_required_fields ===
